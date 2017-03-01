@@ -1,0 +1,16 @@
+{% load fullurl %}
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<p>This code:</p>
+
+<pre><code>{% verbatim %}{% fullurl 'example' %}
+{% fullstatic 'cat.jpg' %}{% endverbatim %}</code></pre>
+
+<p>It gives the following result:</p>
+
+<pre><code>{% fullurl 'example' %}
+{% fullstatic 'cat.jpg' %}</code></pre>
+
+<p>You should be able to see a cat here:</p>
+<p><img src="{% fullstatic 'cat.jpg' %}" alt="cat"></p>
