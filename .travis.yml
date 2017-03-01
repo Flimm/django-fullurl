@@ -1,0 +1,17 @@
+language: python
+cache: pip
+
+python:
+    - "2.7"
+    - "3.3"
+    - "3.4"
+    - "3.5"
+    - "3.6"
+    - "pypy"
+env:
+    - DJANGO=1.8.0
+    - DJANGO=1.9.0
+    - DJANGO=1.10.0
+install:
+    - pip install Django~=$DJANGO
+script: python manage.py test

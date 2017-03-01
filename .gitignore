@@ -3,3 +3,6 @@ __pycache__
 *.pyc
 /db.sqlite3
 /testproject/servedstatic/
+/django_fullurl.egg-info/
+/dist/
+/.tox/
