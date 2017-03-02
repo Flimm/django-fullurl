@@ -3,14 +3,17 @@ import os
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
+readme = open(os.path.join(BASE_DIR, 'README.rst'), 'rb').read().decode('UTF-8')
+changelog = open(os.path.join(BASE_DIR, 'CHANGELOG.rst'), 'rb').read().decode('UTF-8')
+
 setup(
     name='django-fullurl',
-    version='0.1',
+    version='0.2',
     packages=find_packages(exclude=['testproject']),
     author='David D Lowe',
     author_email='daviddlowe.flimm@gmail.com',
     description='The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
-    long_description=open(os.path.join(BASE_DIR, 'README.rst'), "rb").read().decode("UTF-8"),
+    long_description=readme + '\n\n' + changelog,
     license='cc0',
     keywords=['django'],
     install_requires=[
