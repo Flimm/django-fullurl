@@ -21,7 +21,7 @@
 Introduction
 =============
 
-**django-fullurl** adds two new template tags: ``fullurl`` and ``staticurl``. They behave like ``url`` and ``staticurl`` respectively, but they always return an absolute URL with the scheme and authority/domain parts.
+**django-fullurl** adds two new template tags: ``fullurl`` and ``fullstatic``. They behave like ``url`` and ``static`` respectively, but they always return an absolute URL with the scheme and authority/domain parts.
 
 For example, take this ``url`` tag:
 
@@ -41,7 +41,7 @@ If we replace ``url`` with ``fullurl``, it will print this result::
     
 Behind the scenes, it uses `request.build_absolute_uri <https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpRequest.build_absolute_uri>`_ to determine the correct scheme and authority/domain parts.
 
-In the same way that ``fullurl`` behaves like ``url``, ``fullstatic`` behaves like the ``static`` template tag.
+In the same way that ``fullurl`` extends ``url``, ``fullstatic`` extends the ``static`` template tag.
 
 Installation
 ============
