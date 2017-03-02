@@ -68,3 +68,12 @@ OpenGraph URLs need to be absolute, including scheme and authority parts. Here's
     <meta property="og:url" content="{% fullurl "articles:article" article=article %}">
     <meta property="og:image" content="{% fullstatic "cat.jpg" %}">
     
+
+See also
+========
+
+Here are some alternatives, in alphabetical order:
+
+- `django-absoluteuri <https://pypi.python.org/pypi/django-absoluteuri>`_ (`GitHub <https://github.com/fusionbox/django-absoluteuri>`_, `Django Packages <https://djangopackages.org/packages/p/django-absoluteuri/>`_) provides two template tags: ``absoluteuri`` and ``absolutize``. Unlike this app, it uses the site framework to determine the domain to use, which could be an additional database query. This can be useful in some situations, for instance when creating emails.
+- `django-absoluteurl <https://pypi.python.org/pypi/django-absoluteurl>`_ (`GitHub <https://github.com/bgryszko/django-absoluteurl>`_, `Django Packages <https://djangopackages.org/packages/p/django-absoluteurl/>`_) provides a template tag ``absoluteurl`` that works in a similar fashion as ``fullurl``. It does not seem to work in Python 2, or with newer Django versions, however.
+- `django-urltags <https://pypi.python.org/pypi/django-urltags>`_ (`Django Packages <https://djangopackages.org/packages/p/django-urltags/>`_) provides a few template tags, including ``absurl``, but it hasn't been updated since 2012 and it doesn't seem to work on recent Django versions.
