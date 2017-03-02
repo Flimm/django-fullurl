@@ -23,7 +23,9 @@ Introduction
 
 **django-fullurl** adds two new template tags: ``fullurl`` and ``staticurl``. They behave like ``url`` and ``staticurl`` respectively, but they always return an absolute URL with the scheme and authority/domain parts.
 
-For example, take this ``url`` tag::
+For example, take this ``url`` tag:
+
+.. code:: html+django
 
    {% url "articles:article" slug="hello" %}
    
@@ -48,7 +50,9 @@ Run on the command-line::
 
     $ pip install django-fullurl
     
-Make sure these two apps are included in your ``INSTALLED_APPS`` settings::
+Make sure these two apps are included in your ``INSTALLED_APPS`` settings:
+
+.. code:: python
 
     INSTALLED_APPS = [
         'django.contrib.staticfiles',
@@ -61,7 +65,9 @@ Make sure ``django.template.context_processors.request`` is included in your con
 Example usage
 =============
 
-OpenGraph URLs need to be absolute, including scheme and authority parts. Here's how you can use ``fullurl`` and ``fullstatic`` to help with this::
+OpenGraph URLs need to be absolute, including scheme and authority parts. Here's how you can use ``fullurl`` and ``fullstatic`` to help with this:
+
+.. code:: html+django
 
     {% load fullurl %}
     
