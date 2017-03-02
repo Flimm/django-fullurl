@@ -8,7 +8,7 @@ changelog = open(os.path.join(BASE_DIR, 'CHANGELOG.rst'), 'rb').read().decode('U
 
 setup(
     name='django-fullurl',
-    version='0.2',
+    version='0.3',
     packages=find_packages(exclude=['testproject']),
     author='David D Lowe',
     author_email='daviddlowe.flimm@gmail.com',
