@@ -6,3 +6,4 @@ __pycache__
 /django_fullurl.egg-info/
 /dist/
 /.tox/
+/build/
