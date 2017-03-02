@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.4
+---
+
+* Fix RST syntax errors in README.rst
+
 0.3
 ---
 
