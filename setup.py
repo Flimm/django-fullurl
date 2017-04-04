@@ -14,7 +14,7 @@ setup(
     author_email='daviddlowe.flimm@gmail.com',
     description='The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
     long_description=readme + '\n\n' + changelog,
-    license='cc0',
+    license='mit',
     keywords=['django'],
     install_requires=[
         'Django>=1.8',
@@ -34,6 +34,6 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
+        'License :: OSI Approved :: MIT License',
     ],
 )
