@@ -75,6 +75,22 @@ OpenGraph URLs need to be absolute, including scheme and authority parts. Here's
     <meta property="og:image" content="{% fullstatic "cat.jpg" %}">
     
 
+Alternatively you can convert URL from relative to absolute using ``build_fullurl`` tag:
+
+.. code:: html+django
+
+    {% build_fullurl article.get_absolute_url %}
+    {% build_fullurl "/custom-url/" %}
+
+
+Or with sorl-thumbnail:
+
+.. code:: html+django
+
+    {% thumbnail article.image as thumb %}
+    {% build_fullurl thumb.url %}
+    {% endthumbnail %}
+
 See also
 ========
 

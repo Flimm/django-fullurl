@@ -45,3 +45,8 @@ class FullURLTestCase(TestCase):
         with self.settings(ROOT_URLCONF=__name__):
             rendered = template.render(self.request_context)
             self.assertEquals(rendered, 'http://testserver/foobar/welcome')
+
+    def test_build_fullurl_custom(self):
+        template = Template('{% load fullurl %}{% build_fullurl "/custom-url/" %}')
+        rendered = template.render(self.request_context)
+        self.assertEquals(rendered, 'http://testserver/custom-url/')
