@@ -87,7 +87,7 @@ Or with sorl-thumbnail:
 
 .. code:: html+django
 
-    {% thumbnail article.image as thumb %}
+    {% thumbnail article.image "100x100" as thumb %}
     {% build_fullurl thumb.url %}
     {% endthumbnail %}
 
