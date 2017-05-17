@@ -21,7 +21,9 @@
 Introduction
 =============
 
-**django-fullurl** adds two new template tags: ``fullurl`` and ``fullstatic``. They behave like ``url`` and ``static`` respectively, but they always return an absolute URL with the scheme and authority/domain parts.
+**django-fullurl** adds three new template tags: ``fullurl``, ``fullstatic``, and ``buildfullurl``.
+
+``fullurl`` and ``fullstatic`` behave like ``url`` and ``static`` respectively, but they always return an absolute URL with the scheme and authority/domain parts.
 
 For example, take this ``url`` tag:
 
@@ -42,6 +44,12 @@ If we replace ``url`` with ``fullurl``, it will print this result::
 Behind the scenes, it uses `request.build_absolute_uri <https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpRequest.build_absolute_uri>`__ to determine the correct scheme and authority/domain parts.
 
 In the same way that ``fullurl`` extends ``url``, ``fullstatic`` extends the ``static`` template tag.
+
+``buildfullurl`` takes a relative URL as an argument, and prints an absolute URL with the scheme and authority parts. For example:
+
+.. code:: html+django
+
+    {% buildfullurl article.cover.url %}
 
 Installation
 ============
@@ -75,21 +83,14 @@ OpenGraph URLs need to be absolute, including scheme and authority parts. Here's
     <meta property="og:image" content="{% fullstatic "cat.jpg" %}">
     
 
-Alternatively you can convert URL from relative to absolute using ``buildfullurl`` tag:
+You can convert URL from relative to absolute using ``buildfullurl`` tag:
 
 .. code:: html+django
 
-    {% buildfullurl article.get_absolute_url %}
-    {% buildfullurl "/custom-url/" %}
-
-
-Or with sorl-thumbnail:
-
-.. code:: html+django
-
-    {% thumbnail article.image "100x100" as thumb %}
-    {% buildfullurl thumb.url %}
-    {% endthumbnail %}
+    {% load fullurl %}
+    
+    <meta property="og:url" content="{% buildfullurl article.get_absolute_url %}">
+    <meta property="og:image" content="{% buildfullurl article.image.url %}">
 
 See also
 ========
