@@ -8,11 +8,11 @@ changelog = open(os.path.join(BASE_DIR, 'CHANGELOG.rst'), 'rb').read().decode('U
 
 setup(
     name='django-fullurl',
-    version='0.4',
+    version='0.5',
     packages=find_packages(exclude=['testproject']),
     author='David D Lowe',
     author_email='daviddlowe.flimm@gmail.com',
-    description='The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
+    description='Adds three template tags: `fullurl`, `fullstatic` and `buildfullurl`. The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
     long_description=readme + '\n\n' + changelog,
     license='mit',
     keywords=['django'],
@@ -21,7 +21,7 @@ setup(
     ],
     url='https://github.com/Flimm/django-fullurl',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Framework :: Django',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',

@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.5
+---
+
+* Add new template tag: ``buildfullurl``
+* Relicense to MIT
+* Support Django 1.11
+
+Thank you to `Jakub Dolejšek <https://github.com/x0nix>`__ for the contribution
+of the new template tage ``buildfullurl``.
+
 0.4
 ---
 
