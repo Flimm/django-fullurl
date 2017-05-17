@@ -43,16 +43,16 @@ def fullstatic(parser, token):
 
 
 @register.simple_tag(takes_context=True)
-def build_fullurl(context, url):
+def buildfullurl(context, url):
     """Converts relative URL to absolute.
 
     For example:
 
-        {% build_fullurl article.get_absolute_url %}
+        {% buildfullurl article.get_absolute_url %}
 
     or:
 
-        {% build_fullurl "/custom-url/" %}
+        {% buildfullurl "/custom-url/" %}
 
     """
     return context.request.build_absolute_uri(url)
