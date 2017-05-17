@@ -42,6 +42,22 @@ def fullstatic(parser, token):
     return FullStaticNode(do_static(parser, token))
 
 
+@register.simple_tag(takes_context=True)
+def buildfullurl(context, url):
+    """Converts relative URL to absolute.
+
+    For example:
+
+        {% buildfullurl article.get_absolute_url %}
+
+    or:
+
+        {% buildfullurl "/custom-url/" %}
+
+    """
+    return context.request.build_absolute_uri(url)
+
+
 class FullURLNode(Node):
     def __init__(self, subject):
         self._subject = subject
