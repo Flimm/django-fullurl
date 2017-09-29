@@ -44,4 +44,7 @@ install:
     - python setup.py -q install
 script:
     - python manage.py test
-    - python setup.py check --restructured --strict --metadata
+    - |
+        if python -c 'import sys; sys.exit(0 if sys.version_info >= (3,4) else 1)' ; then
+            python setup.py check --restructured --strict --metadata
+        fi
