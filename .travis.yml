@@ -40,5 +40,8 @@ matrix:
           env: DJANGO_VERSION=1.11
 install:
     - pip install -q Django~=$DJANGO_VERSION
+    - pip install docutils pygments # needed for tests
     - python setup.py -q install
-script: python manage.py test
+script:
+    - python manage.py test
+    - python setup.py check --restructured --strict --metadata
