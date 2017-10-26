@@ -79,6 +79,9 @@ Make sure ``django.template.context_processors.request`` is included in your con
 Example usage
 =============
 
+OpenGraph
+---------
+
 OpenGraph URLs need to be absolute, including scheme and authority parts. Here's how you can use ``fullurl`` and ``fullstatic`` to help with this:
 
 .. code:: html+django
@@ -97,6 +100,19 @@ You can convert URL from relative to absolute using ``buildfullurl`` tag:
     
     <meta property="og:url" content="{% buildfullurl article.get_absolute_url %}">
     <meta property="og:image" content="{% buildfullurl article.image.url %}">
+
+Facebook static share link
+--------------------------
+
+If you want to create a Facebook share button using a link, you can use the ``sharer.php`` feature. The value for the ``u`` query parameter needs to be an absolute URL, encoded using the ``urlencode`` filter, like this:
+
+.. code:: html+django
+
+   {% load fullurl %}
+
+   <a href="https://www.facebook.com/sharer/sharer.php?u={% filter urlencode %}{% buildfullurl article.get_absolute_url %}{% endfilter %}">
+     Share
+   </a>
 
 See also
 ========
