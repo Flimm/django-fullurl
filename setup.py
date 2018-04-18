@@ -12,7 +12,7 @@ setup(
     packages=find_packages(exclude=['testproject']),
     author='David D Lowe',
     author_email='daviddlowe.flimm@gmail.com',
-    description='Adds three template tags: `fullurl`, `fullstatic` and `buildfullurl`. The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
+    description='Adds three template tags to Django: `fullurl`, `fullstatic` and `buildfullurl`. The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
     long_description=readme + '\n\n' + changelog,
     license='mit',
     keywords=['django'],

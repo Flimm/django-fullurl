@@ -27,7 +27,7 @@
 Introduction
 =============
 
-**django-fullurl** adds three new template tags: ``fullurl``, ``fullstatic``, and ``buildfullurl``.
+**django-fullurl** adds three new template tags to Django: ``fullurl``, ``fullstatic``, and ``buildfullurl``.
 
 ``fullurl`` and ``fullstatic`` behave like ``url`` and ``static`` respectively, but they always return an absolute URL with the scheme and authority/domain parts.
 
@@ -92,7 +92,7 @@ OpenGraph URLs need to be absolute, including scheme and authority parts. Here's
     <meta property="og:image" content="{% fullstatic "cat.jpg" %}">
     
 
-You can convert URL from relative to absolute using ``buildfullurl`` tag:
+You can convert a URL from relative to absolute using ``buildfullurl`` tag:
 
 .. code:: html+django
 
