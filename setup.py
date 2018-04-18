@@ -14,12 +14,18 @@ setup(
     author_email='daviddlowe.flimm@gmail.com',
     description='Adds three template tags to Django: `fullurl`, `fullstatic` and `buildfullurl`. The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
     long_description=readme + '\n\n' + changelog,
+    long_description_content_type='text/x-rst',
     license='mit',
     keywords=['django'],
     install_requires=[
         'Django>=1.8',
     ],
-    url='https://github.com/Flimm/django-fullurl',
+    project_urls={
+        'GitHub': 'https://github.com/Flimm/django-fullurl',
+        'Change log': 'https://github.com/Flimm/django-fullurl/blob/master/CHANGELOG.rst',
+        'Say Thanks!': 'https://saythanks.io/to/Flimm',
+    },
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Framework :: Django',
