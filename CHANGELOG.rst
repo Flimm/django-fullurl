@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0
+---
+
+* First release marked as stable
+* Support Django 2.0 and 2.1
+* Support Python 3.7
+
 0.5
 ---
 
