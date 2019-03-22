@@ -20,6 +20,7 @@ setup(
     install_requires=[
         'Django>=1.8',
     ],
+    url='https://github.com/Flimm/django-fullurl',
     project_urls={
         'GitHub': 'https://github.com/Flimm/django-fullurl',
         'Change log': 'https://github.com/Flimm/django-fullurl/blob/master/CHANGELOG.rst',
