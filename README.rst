@@ -76,6 +76,13 @@ Make sure these two apps are included in your ``INSTALLED_APPS`` settings:
     
 Make sure ``django.template.context_processors.request`` is included in your context processors.
 
+Template tags summary
+=====================
+
+- ``{% fullurl "some-url-name" v1 v2 %}`` This behaves like the ``url`` Django template tag (`doc <https://docs.djangoproject.com/en/stable/ref/templates/builtins/#url>`__), but it returns a full URL instead of a relative one.
+- ``{% fullstatic "images/hi.jpg" %}`` This behaves like the ``static`` Django template tag (`doc <https://docs.djangoproject.com/en/stable/ref/templates/builtins/#static>`__), but it returns a full URL instead of a relative one.
+- ``{% buildfullurl "/foobar" %}`` This will convert a relative URL into a full URL using ``request.build_absolute_uri`` (`doc <https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpRequest.build_absolute_uri>`__).
+
 Example usage
 =============
 
@@ -113,6 +120,7 @@ If you want to create a Facebook share button using a link, you can use the ``sh
    <a href="https://www.facebook.com/sharer/sharer.php?u={% filter urlencode %}{% buildfullurl article.get_absolute_url %}{% endfilter %}">
      Share
    </a>
+  
 
 See also
 ========
