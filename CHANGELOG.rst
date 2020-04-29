@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1
+---
+* Support Django 2.2 and 3.0
+* Support Python 3.8
+
 1.0
 ---
 
