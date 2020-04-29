@@ -4,7 +4,6 @@ import os
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 readme = open(os.path.join(BASE_DIR, 'README.rst'), 'rb').read().decode('UTF-8')
-changelog = open(os.path.join(BASE_DIR, 'CHANGELOG.rst'), 'rb').read().decode('UTF-8')
 
 setup(
     name='django-fullurl',
@@ -13,7 +12,7 @@ setup(
     author='David D Lowe',
     author_email='daviddlowe.flimm@gmail.com',
     description='Adds three template tags to Django: `fullurl`, `fullstatic` and `buildfullurl`. The template tag `fullurl` acts just like `url`, but it always prints absolute URLs with scheme and domain',
-    long_description=readme + '\n\n' + changelog,
+    long_description=readme,
     long_description_content_type='text/x-rst',
     license='mit',
     keywords=['django'],
