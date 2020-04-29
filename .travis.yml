@@ -51,6 +51,12 @@ matrix:
         - python: "3.7"
           env: DJANGO_VERSION=2.2.0
           dist: xenial
+        - python: "3.7"
+          env: DJANGO_VERSION=3.0.0
+          dist: xenial
+        - python: "3.8"
+          env: DJANGO_VERSION=3.0.0
+          dist: xenial
         - python: "nightly"
           env: DJANGO_VERSION=2.2.0
           dist: xenial
