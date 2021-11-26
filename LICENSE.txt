@@ -1,4 +1,4 @@
-Copyright (c) 2017 David D Lowe
+Copyright (c) 2017-2021 David D Lowe
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

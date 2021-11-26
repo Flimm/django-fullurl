@@ -1,6 +1,11 @@
 Changelog
 =========
 
+Unreleased
+----------
+* Support Django 3.1 and 3.2
+* Support Python 3.9 and 3.10
+
 1.1
 ---
 * Support Django 2.2 and 3.0
