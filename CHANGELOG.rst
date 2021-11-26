@@ -5,6 +5,7 @@ Unreleased
 ----------
 * Support Django 3.1 and 3.2
 * Support Python 3.9 and 3.10
+* Swith to GitHub Actions
 
 1.1
 ---
