@@ -1,11 +1,15 @@
 Changelog
 =========
 
+1.3
+---
+* Support Django 4.0
+
 1.2
 ---
 * Support Django 3.1 and 3.2
 * Support Python 3.9 and 3.10
-* Swith to GitHub Actions
+* Switch to GitHub Actions
 
 1.1
 ---
