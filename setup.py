@@ -25,7 +25,7 @@ setup(
         'Change log': 'https://github.com/Flimm/django-fullurl/blob/master/CHANGELOG.rst',
         'Say Thanks!': 'https://saythanks.io/to/Flimm',
     },
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4',
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Framework :: Django',
@@ -39,6 +39,7 @@ setup(
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
