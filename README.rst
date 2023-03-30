@@ -14,18 +14,22 @@
     :target: https://pypi.org/project/django-fullurl/
     :alt: django-fullurl on PyPI
 
-.. image:: https://travis-ci.org/Flimm/django-fullurl.svg?branch=master
-    :target: https://travis-ci.org/Flimm/django-fullurl
-    :alt: Travis CI for django-fullurl (master branch)
-
 .. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
     :target: https://saythanks.io/to/Flimm
     :alt: Say Thanks!
     
 ------
 
-Introduction
-=============
+Template tags summary
+=====================
+
+- ``{% fullurl "some-url-name" v1 v2 %}`` This behaves like the ``url`` Django template tag (`doc <https://docs.djangoproject.com/en/stable/ref/templates/builtins/#url>`__), but it returns a full URL instead of a relative one.
+- ``{% fullstatic "images/hi.jpg" %}`` This behaves like the ``static`` Django template tag (`doc <https://docs.djangoproject.com/en/stable/ref/templates/builtins/#static>`__), but it returns a full URL instead of a relative one.
+- ``{% buildfullurl "/foobar" %}`` This will convert a relative URL into a full URL using ``request.build_absolute_uri`` (`doc <https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpRequest.build_absolute_uri>`__).
+
+
+Description
+===========
 
 **django-fullurl** adds three new template tags to Django: ``fullurl``, ``fullstatic``, and ``buildfullurl``.
 
@@ -75,13 +79,6 @@ Make sure these two apps are included in your ``INSTALLED_APPS`` settings:
     ]
     
 Make sure ``django.template.context_processors.request`` is included in your context processors.
-
-Template tags summary
-=====================
-
-- ``{% fullurl "some-url-name" v1 v2 %}`` This behaves like the ``url`` Django template tag (`doc <https://docs.djangoproject.com/en/stable/ref/templates/builtins/#url>`__), but it returns a full URL instead of a relative one.
-- ``{% fullstatic "images/hi.jpg" %}`` This behaves like the ``static`` Django template tag (`doc <https://docs.djangoproject.com/en/stable/ref/templates/builtins/#static>`__), but it returns a full URL instead of a relative one.
-- ``{% buildfullurl "/foobar" %}`` This will convert a relative URL into a full URL using ``request.build_absolute_uri`` (`doc <https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpRequest.build_absolute_uri>`__).
 
 Example usage
 =============
