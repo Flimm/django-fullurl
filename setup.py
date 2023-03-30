@@ -7,7 +7,7 @@ readme = open(os.path.join(BASE_DIR, 'README.rst'), 'rb').read().decode('UTF-8')
 
 setup(
     name='django-fullurl',
-    version='1.3',
+    version='1.4',
     packages=find_packages(exclude=['testproject']),
     author='David D Lowe',
     author_email='daviddlowe.flimm@gmail.com',

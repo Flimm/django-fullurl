@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.4
+---
+* Support Django 4.1
+* Support Python 3.11
+
 1.3
 ---
 * Support Django 4.0
